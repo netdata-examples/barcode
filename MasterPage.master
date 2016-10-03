@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+    <form id="form1" runat="server">
+   
+        <div class="col-md-12" style="background-color:aqua">
+            <div class="col-md-12" >
+           <br />
+               <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-justified" role="group">
+                        <a href="../Default.aspx"><img src="../img/yorumla.png" class="img-responsive"/></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                            <div class="input-group">
+                                <input type="text" runat="server" id="aramatext" class="form-control" placeholder="Ürün Adı ya da Barkod Numarası" />
+                                <span class="input-group-btn">
+                                    <asp:Button ID="Button2" CssClass="btn btn-default" runat="server" Text="Ara" OnClick="Button2_Click" />
+                                </span>
+                            </div>
+                        
+                </div>
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-justified" role="group">
+                        <asp:HyperLink ID="HyperLink3" CssClass="btn btn-default"  runat="server" NavigateUrl="~/hesabim.aspx">Hesabım</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink4" CssClass="btn btn-default" runat="server" >Çıkış Yap</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" CssClass="btn btn-default" runat="server" >Giriş Yap</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" CssClass="btn btn-default" runat="server" NavigateUrl="~/kayitol.aspx">Kayıt Ol</asp:HyperLink>
+                    </div>
+                </div>
+                </div>
+                    </div>
+            </div>
+            <div style="min-height: 650px">
+           <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                                Copyright 2016.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+   
+    </form>
+        </div>
+</body>
+    
+</html>
